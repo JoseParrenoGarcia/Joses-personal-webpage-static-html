@@ -16,52 +16,6 @@
 
 ### Medium Priority
 
-#### D3: Experience Section - Evaluate Redundancy
-**Status:** Needs analysis
-**Priority:** Medium
-**Proposed by:** Jose
-
-**Current state:**
-- Detailed timeline with full role progression
-- Specific achievements and metrics
-- Duplicates some information from About section
-- Adds significant page length
-
-**Analysis:**
-- **Pro keeping:** Demonstrates depth of experience, specific achievements, career progression
-- **Pro removing:** Redundant with About section, adds noise for busy C-suite readers, less relevant for consulting positioning
-- **Pro LinkedIn reference:** Shorter, delegates detail to LinkedIn, keeps site focused
-
-**Recommendation:**
-**Replace detailed timeline with condensed approach:**
-
-Option A: "Career highlights" format
-- 3-4 key achievements with company names
-- Links to full LinkedIn profile
-- Maintains credibility without overwhelming detail
-
-Option B: Remove section entirely
-- Strengthen About section with key metrics
-- Add LinkedIn link prominently in About
-- Trust that detailed timeline lives on LinkedIn
-
-Option C: Collapsible/expandable section
-- Show summary by default
-- "View full experience →" expands timeline
-- Best of both worlds but adds interaction complexity
-
-**Preferred:** Option A - Claude recommends condensing to highlights + LinkedIn reference. Current Experience section serves IC job seekers more than consulting clients.
-
-**Implementation notes:**
-- If condensing, extract 3-4 most impressive achievements
-- Ensure About section captures essential credibility
-- Make LinkedIn link prominent and clear
-- Test with target audience if possible
-
----
-
-### Low Priority
-
 #### D4: Visual Decorations and Accents
 **Status:** Future consideration
 **Priority:** Low
@@ -812,5 +766,6 @@ Before implementing certain improvements, Claude needs Jose's input:
 | 2026-01-29 | Initial backlog created | All | N/A |
 | 2026-01-29 | D1: Photo placeholder implemented | Design | High |
 | 2026-01-29 | D2: Company logos with descriptors implemented | Design | High |
+| 2026-01-29 | D3: Experience section removed, LinkedIn link added | Design | Medium |
 | | | | |
 
