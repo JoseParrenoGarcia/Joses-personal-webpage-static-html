@@ -821,6 +821,18 @@ a:hover {
     margin-bottom: 32px;
     padding-bottom: 16px;
     border-bottom: 2px solid var(--terracotta);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.pillar-header:hover {
+    border-bottom-color: var(--terracotta-dark);
+}
+
+.pillar-header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .pillar-title {
@@ -831,13 +843,42 @@ a:hover {
     margin: 0;
 }
 
+.pillar-chevron {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--terracotta);
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.article-pillar:not(.collapsed) .pillar-chevron {
+    transform: rotate(90deg);
+}
+
 .carousel-nav-group {
     display: flex;
     gap: 12px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.article-pillar.collapsed .carousel-nav-group {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .carousel-wrapper {
     position: relative;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    opacity: 1;
+}
+
+.article-pillar.collapsed .carousel-wrapper {
+    max-height: 0;
+    opacity: 0;
+    margin-bottom: 0;
 }
 
 .carousel-container {

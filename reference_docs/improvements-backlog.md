@@ -22,6 +22,7 @@ These items were in the original backlog but have been implemented:
 - **D2: Add Company Logos** - Implemented in about section with Skyscanner, Hastings Direct, Deloitte
 - **C1: Navigation Label Clarity** - Navigation updated to use "Newsletter"
 - **S1: Simplify CTA Hierarchy** - Standardized all primary CTAs to "Schedule a Consultation" (hero, navigation, services footer, contact section)
+- **N3: Newsletter Section Length** - Implemented collapsible article pillars (all 4 categories start collapsed, click to expand)
 
 ---
 
