@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initScrollAnimations();
     initFormHandling();
+    initCarousels();
 });
 
 // ============================================================================
@@ -121,21 +122,14 @@ function initScrollAnimations() {
         observer.observe(card);
     });
 
-    // Observe article cards with stagger
-    const articleCards = document.querySelectorAll('.article-card:not(.featured)');
+    // Observe carousel article cards with stagger
+    const articleCards = document.querySelectorAll('.article-card.carousel');
     articleCards.forEach((card, index) => {
         card.style.opacity = '0';
-        card.style.animationDelay = `${index * 0.08}s`;
+        card.style.animationDelay = `${(index % 5) * 0.08}s`;
         observer.observe(card);
     });
 
-    // Observe featured articles
-    const featuredArticles = document.querySelectorAll('.article-card.featured');
-    featuredArticles.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.animationDelay = `${index * 0.15}s`;
-        observer.observe(card);
-    });
 
     // Observe timeline items
     const timelineItems = document.querySelectorAll('.timeline-item');
@@ -159,6 +153,62 @@ function initScrollAnimations() {
         item.style.opacity = '0';
         item.style.animationDelay = `${0.5 + index * 0.1}s`;
         observer.observe(item);
+    });
+}
+
+// ============================================================================
+// Carousel Navigation
+// ============================================================================
+function initCarousels() {
+    const pillars = document.querySelectorAll('.article-pillar');
+
+    pillars.forEach(pillar => {
+        const container = pillar.querySelector('.carousel-container');
+        const prevBtn = pillar.querySelector('.carousel-nav.prev');
+        const nextBtn = pillar.querySelector('.carousel-nav.next');
+
+        if (!container || !prevBtn || !nextBtn) return;
+
+        const cardWidth = 340; // Card width + gap
+        const scrollAmount = cardWidth + 24;
+
+        prevBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            container.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Optional: Update button visibility based on scroll position
+        container.addEventListener('scroll', () => {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            if (container.scrollLeft <= 0) {
+                prevBtn.style.opacity = '0.3';
+                prevBtn.style.cursor = 'default';
+            } else {
+                prevBtn.style.opacity = '';
+                prevBtn.style.cursor = 'pointer';
+            }
+
+            if (container.scrollLeft >= maxScroll - 10) {
+                nextBtn.style.opacity = '0.3';
+                nextBtn.style.cursor = 'default';
+            } else {
+                nextBtn.style.opacity = '';
+                nextBtn.style.cursor = 'pointer';
+            }
+        });
+
+        // Trigger initial scroll event to set button states
+        container.dispatchEvent(new Event('scroll'));
     });
 }
 
