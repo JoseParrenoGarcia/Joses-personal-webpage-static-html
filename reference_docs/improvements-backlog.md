@@ -12,69 +12,6 @@
 
 ## Design Improvements
 
-### High Priority
-
-#### D1: Add Professional Photo of Jose
-**Status:** Completed (Placeholder)
-**Priority:** High
-**Proposed by:** Jose
-**Completed:** 2026-01-29
-
-**Description:**
-Add professional headshot to build trust with C-suite audience. Personal connection matters for high-value consulting engagements.
-
-**Implementation:**
-- Added photo placeholder in hero section
-- Wide screens: Two-column layout with photo on right, vertically centered
-- Mobile screens: Photo stacks below credentials
-- Square shape (320px desktop, 240px mobile)
-- Taupe background with person silhouette icon
-- Ready for actual photo replacement
-
-**Next step:**
-Replace placeholder with actual professional photo:
-- Image should be 800x800px minimum
-- Export at 2x for retina displays
-- Use WebP format with JPG fallback
-- Square crop matching placeholder dimensions
-
----
-
-#### D2: Add Company Logos / Social Proof
-**Status:** Proposed
-**Priority:** High
-**Proposed by:** Jose
-
-**Description:**
-Display companies Jose has worked with to establish credibility. C-suite executives evaluate consultants based on comparable experience.
-
-**Options:**
-1. **Logo bar only:** Clean logos of Skyscanner, Hastings Direct, Deloitte
-2. **Logos + brief context:** Logo with "Led 50+ DS/ML engineers" subtitle
-3. **Integrated in About section:** Logos within existing experience narrative
-
-**Recommended approach:**
-Add a "Experience" subsection in the About section with:
-- 3 company logos (Skyscanner, Hastings Direct, Deloitte)
-- One-line context per company
-- Links to company websites (opens in new tab)
-
-**Design considerations:**
-- Logos should be grayscale/monochrome to match aesthetic
-- Equal sizing and spacing
-- Subtle hover effect (color restore on hover)
-
-**Implementation notes:**
-- Obtain high-res logos (SVG preferred)
-- Create monochrome versions
-- Ensure legal compliance (fair use for credentials)
-- Add section between About intro and detail cards
-
-**Alternative:** If logos feel too promotional, use styled text references instead:
-```
-"Previously: Skyscanner (Senior DS Manager) • Hastings Direct (DS Manager) • Deloitte UK"
-```
-
 ---
 
 ### Medium Priority
@@ -874,5 +811,6 @@ Before implementing certain improvements, Claude needs Jose's input:
 |------|--------|----------|----------|
 | 2026-01-29 | Initial backlog created | All | N/A |
 | 2026-01-29 | D1: Photo placeholder implemented | Design | High |
+| 2026-01-29 | D2: Company logos with descriptors implemented | Design | High |
 | | | | |
 
