@@ -26,6 +26,12 @@ This is a static HTML/CSS/JS personal website for Jose Parreno Garcia (Data Scie
 
 Update these docs when making significant changes (see Quick Reference for which doc to update).
 
+### Rules (Prescriptive - Automatically Loaded)
+- [rules/accessibility.md](rules/accessibility.md) - Semantic HTML, WCAG compliance, keyboard navigation
+- [rules/html-css-conventions.md](rules/html-css-conventions.md) - Class naming, code organization, CSS patterns
+
+**Rules take precedence** when coding. Reference docs explain what/why, rules prescribe how.
+
 ---
 
 ## Design Authority
@@ -67,23 +73,6 @@ The site uses a "Financial Editorial Authority" aesthetic inspired by premium bu
 - Modern browsers (Chrome, Firefox, Safari, Edge - latest versions)
 - Mobile-responsive (iOS Safari, Chrome Mobile)
 - Graceful degradation for older browsers
-
----
-
-## Testing and Validation
-
-### Before Committing Changes
-Claude should verify:
-- Visual inspection: Does it look correct in browser?
-- Responsive: Does it work on mobile viewport?
-- Links: Do navigation and external links work?
-- Accessibility: Are semantics and contrast maintained?
-- Performance: Are animations smooth?
-
-### No Need to Mention
-- GitHub Pages constraints (Jose understands this)
-- Future migration concerns (focus on current iteration)
-- Server-side limitations (accepted for prototype)
 
 ---
 
