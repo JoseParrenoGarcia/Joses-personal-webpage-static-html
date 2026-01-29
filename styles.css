@@ -246,8 +246,9 @@ a:hover {
     padding-top: 60px;
     border-top: 2px solid var(--taupe);
     position: sticky;
-    top: 120px;
+    top: 0;
     z-index: 10;
+    background: linear-gradient(135deg, var(--cream) 0%, #f5f0e8 100%);
 }
 
 .credential-item {
