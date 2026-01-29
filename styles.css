@@ -649,6 +649,17 @@ a:hover {
     position: relative;
 }
 
+.company-logo {
+    width: 180px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .company-logo {
+    transform: translateY(-2px);
+}
+
 .logo-link:hover .logo-placeholder {
     border-color: var(--terracotta);
     transform: translateY(-2px);

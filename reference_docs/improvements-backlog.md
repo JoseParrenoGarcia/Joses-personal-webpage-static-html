@@ -12,43 +12,6 @@
 
 ## Design Improvements
 
-### High Priority
-
-#### D2: Add Company Logos / Social Proof
-**Status:** Completed (2026-01-29)
-**Priority:** High
-**Proposed by:** Jose
-
-**Description:**
-Display companies Jose has worked with to establish credibility. C-suite executives evaluate consultants based on comparable experience.
-
-**Options:**
-1. **Logo bar only:** Clean logos of Skyscanner, Hastings Direct, Deloitte
-2. **Logos + brief context:** Logo with "Led 50+ DS/ML engineers" subtitle
-3. **Integrated in About section:** Logos within existing experience narrative
-
-**Recommended approach:**
-Add a "Experience" subsection in the About section with:
-- 3 company logos (Skyscanner, Hastings Direct, Deloitte)
-- One-line context per company
-- Links to company websites (opens in new tab)
-
-**Design considerations:**
-- Logos should be grayscale/monochrome to match aesthetic
-- Equal sizing and spacing
-- Subtle hover effect (color restore on hover)
-
-**Implementation notes:**
-- Obtain high-res logos (SVG preferred)
-- Create monochrome versions
-- Ensure legal compliance (fair use for credentials)
-- Add section between About intro and detail cards
-
-**Alternative:** If logos feel too promotional, use styled text references instead:
-```
-"Previously: Skyscanner (Senior DS Manager) • Hastings Direct (DS Manager) • Deloitte UK"
-```
-
 ---
 
 ### Medium Priority
