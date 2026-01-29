@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initFormHandling();
     initCarousels();
+    initCollapsiblePillars();
 });
 
 // ============================================================================
@@ -172,14 +173,16 @@ function initCarousels() {
         const cardWidth = 340; // Card width + gap
         const scrollAmount = cardWidth + 24;
 
-        prevBtn.addEventListener('click', () => {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent pillar collapse toggle
             container.scrollBy({
                 left: -scrollAmount,
                 behavior: 'smooth'
             });
         });
 
-        nextBtn.addEventListener('click', () => {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent pillar collapse toggle
             container.scrollBy({
                 left: scrollAmount,
                 behavior: 'smooth'
@@ -210,6 +213,42 @@ function initCarousels() {
         // Trigger initial scroll event to set button states
         container.dispatchEvent(new Event('scroll'));
     });
+}
+
+// ============================================================================
+// Collapsible Pillars
+// ============================================================================
+function initCollapsiblePillars() {
+    const pillars = document.querySelectorAll('.article-pillar');
+
+    pillars.forEach(pillar => {
+        const header = pillar.querySelector('.pillar-header');
+
+        if (!header) return;
+
+        // Click handler
+        header.addEventListener('click', (e) => {
+            // Don't toggle if clicking on nav buttons
+            if (e.target.closest('.carousel-nav-group')) return;
+
+            togglePillar(pillar, header);
+        });
+
+        // Keyboard accessibility
+        header.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                togglePillar(pillar, header);
+            }
+        });
+    });
+}
+
+function togglePillar(pillar, header) {
+    const isCollapsed = pillar.classList.contains('collapsed');
+
+    pillar.classList.toggle('collapsed');
+    header.setAttribute('aria-expanded', isCollapsed ? 'true' : 'false');
 }
 
 // ============================================================================
