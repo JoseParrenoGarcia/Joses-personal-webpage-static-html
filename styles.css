@@ -827,73 +827,54 @@ a:hover {
     }
 }
 
-/* Newsletter Signup
+/* Newsletter Redirect
    ========================================================================== */
-.newsletter-signup {
-    background: var(--charcoal);
-    padding: 80px;
-    margin-top: 60px;
-    border-radius: 4px;
+.newsletter-redirect {
+    margin-top: 80px;
+    padding: 60px 0;
+    border-top: 2px solid var(--terracotta);
+    border-bottom: 2px solid var(--terracotta);
 }
 
-.newsletter-content {
-    max-width: 600px;
+.newsletter-redirect-content {
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
 
-.newsletter-content h3 {
-    font-size: 36px;
-    color: var(--white);
-    margin-bottom: 16px;
-}
-
-.newsletter-content > p {
-    color: var(--taupe);
+.newsletter-redirect-content p {
     font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 32px;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 12px;
+    color: var(--text-medium);
     margin-bottom: 16px;
+    line-height: 1.6;
 }
 
-.newsletter-form input[type="email"] {
-    flex: 1;
-    padding: 16px 24px;
-    font-size: 16px;
-    font-family: var(--font-body);
-    border: 2px solid var(--taupe);
-    background: transparent;
-    color: var(--white);
-    border-radius: 2px;
+.newsletter-link {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--terracotta);
+    text-decoration: none;
     transition: var(--transition-fast);
+    display: inline-block;
 }
 
-.newsletter-form input[type="email"]::placeholder {
-    color: var(--taupe);
-}
-
-.newsletter-form input[type="email"]:focus {
-    outline: none;
-    border-color: var(--white);
-}
-
-.newsletter-note {
-    font-size: 14px;
-    color: var(--taupe);
+.newsletter-link:hover {
+    color: var(--terracotta-dark);
+    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
-    .newsletter-signup {
-        padding: 48px 32px;
+    .newsletter-redirect {
+        margin-top: 60px;
+        padding: 48px 0;
     }
 
-    .newsletter-form {
-        flex-direction: column;
+    .newsletter-redirect-content p {
+        font-size: 16px;
+    }
+
+    .newsletter-link {
+        font-size: 18px;
     }
 }
 
