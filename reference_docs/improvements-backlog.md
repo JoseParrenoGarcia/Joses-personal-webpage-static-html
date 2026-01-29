@@ -14,34 +14,8 @@
 
 ### High Priority
 
-#### D1: Add Professional Photo of Jose
-**Status:** Completed (Placeholder)
-**Priority:** High
-**Proposed by:** Jose
-**Completed:** 2026-01-29
-
-**Description:**
-Add professional headshot to build trust with C-suite audience. Personal connection matters for high-value consulting engagements.
-
-**Implementation:**
-- Added photo placeholder in hero section
-- Wide screens: Two-column layout with photo on right, vertically centered
-- Mobile screens: Photo stacks below credentials
-- Square shape (320px desktop, 240px mobile)
-- Taupe background with person silhouette icon
-- Ready for actual photo replacement
-
-**Next step:**
-Replace placeholder with actual professional photo:
-- Image should be 800x800px minimum
-- Export at 2x for retina displays
-- Use WebP format with JPG fallback
-- Square crop matching placeholder dimensions
-
----
-
 #### D2: Add Company Logos / Social Proof
-**Status:** Proposed
+**Status:** Completed (2026-01-29)
 **Priority:** High
 **Proposed by:** Jose
 
@@ -874,5 +848,6 @@ Before implementing certain improvements, Claude needs Jose's input:
 |------|--------|----------|----------|
 | 2026-01-29 | Initial backlog created | All | N/A |
 | 2026-01-29 | D1: Photo placeholder implemented | Design | High |
+| 2026-01-29 | D2: Company logos with descriptors implemented | Design | High |
 | | | | |
 
