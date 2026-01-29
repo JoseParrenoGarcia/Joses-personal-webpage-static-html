@@ -245,6 +245,9 @@ a:hover {
     gap: 40px;
     padding-top: 60px;
     border-top: 2px solid var(--taupe);
+    position: sticky;
+    top: 120px;
+    z-index: 10;
 }
 
 .credential-item {
@@ -328,6 +331,8 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 .hero-photo-img {
