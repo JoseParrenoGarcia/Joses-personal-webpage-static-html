@@ -179,16 +179,26 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     padding: 160px var(--container-padding) 100px;
     background: linear-gradient(135deg, var(--cream) 0%, #f5f0e8 100%);
     overflow: hidden;
 }
 
-.hero-content {
-    max-width: 900px;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
     position: relative;
     z-index: 2;
+}
+
+.hero-content {
+    position: relative;
     animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -279,6 +289,17 @@ a:hover {
     }
 }
 
+@media (max-width: 1100px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .hero-photo {
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         padding: 120px var(--container-padding) 80px;
@@ -316,7 +337,7 @@ a:hover {
 .hero-photo {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    align-items: center;
 }
 
 .photo-placeholder {
